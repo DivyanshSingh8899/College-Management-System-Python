@@ -1,5 +1,6 @@
 import json
 from faculty import faculty_menu
+from Course import course_menu
 
 FILE = "data/students.json"
 
@@ -45,9 +46,7 @@ def student_menu():
 
 
 
-def course_menu():
-    print("\n--- Course Management ---")
-    print("Coming Soon!")
+
 
 def fees_menu():
     print("\n--- Fees & Reports ---")
