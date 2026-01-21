@@ -1,28 +1,80 @@
-from student_module.student import student_menu
-from faculty_module.faculty import faculty_menu
-from course_module.course import course_menu
-from fees_module.fees import fees_menu
+import json
 
-while True:
-    print("\n===== COLLEGE MANAGEMENT SYSTEM =====")
-    print("1. Student Management")
-    print("2. Faculty Management")
-    print("3. Course Management")
-    print("4. Fees & Reports")
-    print("5. Exit")
+FILE = "data/students.json"
 
-    choice = int(input("Enter your choice: "))
+def load_data():
+    try:
+        with open(FILE, "r") as f:
+            return json.load(f)
+    except:
+        return []
 
-    if choice == 1:
-        student_menu()
-    elif choice == 2:
-        faculty_menu()
-    elif choice == 3:
-        course_menu()
-    elif choice == 4:
-        fees_menu()
-    elif choice == 5:
-        print("Thank You!")
-        break
-    else:
-        print("Invalid choice")
+def save_data(data):
+    with open(FILE, "w") as f:
+        json.dump(data, f, indent=4)
+
+def add_student():
+    students = load_data()
+    sid = input("Enter Student ID: ")
+    name = input("Enter Name: ")
+    course = input("Enter Course: ")
+    students.append({"ID": sid, "Name": name, "Course": course})
+    save_data(students)
+    print("Student Added Successfully")
+
+def view_students():
+    students = load_data()
+    for s in students:
+        print(s)
+
+def student_menu():
+    while True:
+        print("\n--- Student Management ---")
+        print("1. Add Student")
+        print("2. View Students")
+        print("3. Back")
+
+        ch = int(input("Enter choice: "))
+        if ch == 1:
+            add_student()
+        elif ch == 2:
+            view_students()
+        elif ch == 3:
+            break
+
+def faculty_menu():
+    print("\n--- Faculty Management ---")
+    print("Coming Soon!")
+
+def course_menu():
+    print("\n--- Course Management ---")
+    print("Coming Soon!")
+
+def fees_menu():
+    print("\n--- Fees & Reports ---")
+    print("Coming Soon!")
+
+if __name__ == "__main__":
+    while True:
+        print("\n===== COLLEGE MANAGEMENT SYSTEM =====")
+        print("1. Student Management")
+        print("2. Faculty Management")
+        print("3. Course Management")
+        print("4. Fees & Reports")
+        print("5. Exit")
+
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            student_menu()
+        elif choice == 2:
+            faculty_menu()
+        elif choice == 3:
+            course_menu()
+        elif choice == 4:
+            fees_menu()
+        elif choice == 5:
+            print("Thank You!")
+            break
+        else:
+            print("Invalid choice")
