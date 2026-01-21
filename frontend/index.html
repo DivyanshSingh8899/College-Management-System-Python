@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>📚 College Management System</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#students" class="nav-link">Students</a></li>
+                <li><a href="#faculty" class="nav-link">Faculty</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#fees" class="nav-link">Fees</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to College Management System</h2>
+            <p>Manage students, faculty, courses, and fees all in one place</p>
+            <button class="btn btn-primary" onclick="scrollToSection('students')">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Statistics Dashboard -->
+        <section class="dashboard">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👨‍🎓</div>
+                    <h3>Total Students</h3>
+                    <p class="stat-number">250</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👨‍🏫</div>
+                    <h3>Total Faculty</h3>
+                    <p class="stat-number">45</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📖</div>
+                    <h3>Total Courses</h3>
+                    <p class="stat-number">32</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <h3>Total Fees</h3>
+                    <p class="stat-number">₹25L</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Management Section -->
+        <section id="students" class="module-section">
+            <h2>Student Management</h2>
+            <div class="module-grid">
+                <div class="module-card">
+                    <div class="card-icon">➕</div>
+                    <h3>Add Student</h3>
+                    <p>Register a new student with complete information</p>
+                    <button class="btn btn-secondary">Add</button>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">👁️</div>
+                    <h3>View Students</h3>
+                    <p>View all registered students and their details</p>
+                    <button class="btn btn-secondary">View</button>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Search Student</h3>
+                    <p>Find a specific student by ID or name</p>
+                    <button class="btn btn-secondary">Search</button>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">✏️</div>
+                    <h3>Update Student</h3>
+                    <p>Modify student information</p>
+                    <button class="btn btn-secondary">Update</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faculty Management Section -->
+        <section id="faculty" class="module-section">
+            <h2>Faculty Management</h2>
+            <div class="module-grid">
+                <div class="module-card">
+                    <div class="card-icon">➕</div>
+                    <h3>Add Faculty</h3>
+                    <p>Register a new faculty member</p>
+                    <button class="btn btn-secondary">Add</button>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">👁️</div>
+                    <h3>View Faculty</h3>
+                    <p>View all faculty members and their details</p>
+                    <button class="btn btn-secondary">View</button>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Search Faculty</h3>
+                    <p>Find a specific faculty member</p>
+                    <button class="btn btn-secondary">Search</button>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">✏️</div>
+                    <h3>Update Faculty</h3>
+                    <p>Modify faculty information</p>
+                    <button class="btn btn-secondary">Update</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Management Section -->
+        <section id="courses" class="module-section">
+            <h2>Course Management</h2>
+            <div class="module-grid">
+                <div class="module-card">
+                    <div class="card-icon">➕</div>
+                    <h3>Add Course</h3>
+                    <p>Create a new course</p>
+                    <button class="btn btn-secondary">Add</button>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">👁️</div>
+                    <h3>View Courses</h3>
+                    <p>View all available courses</p>
+                    <button class="btn btn-secondary">View</button>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">👨‍🏫</div>
+                    <h3>Assign Faculty</h3>
+                    <p>Assign faculty to courses</p>
+                    <button class="btn btn-secondary">Assign</button>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Course Details</h3>
+                    <p>View detailed course information</p>
+                    <button class="btn btn-secondary">Details</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fees Management Section -->
+        <section id="fees" class="module-section">
+            <h2>Fees & Reports</h2>
+            <div class="module-grid">
+                <div class="module-card">
+                    <div class="card-icon">➕</div>
+                    <h3>Add Fee Payment</h3>
+                    <p>Record a new fee payment</p>
+                    <button class="btn btn-secondary">Add</button>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">👁️</div>
+                    <h3>View All Fees</h3>
+                    <p>View all fee payments and records</p>
+                    <button class="btn btn-secondary">View</button>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">⏳</div>
+                    <h3>Pending Fees</h3>
+                    <p>View students with pending fee payments</p>
+                    <button class="btn btn-secondary">Pending</button>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">📈</div>
+                    <h3>Fee Reports</h3>
+                    <p>Generate fee reports and statistics</p>
+                    <button class="btn btn-secondary">Reports</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 College Management System. Created by Divyansh Singh. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
