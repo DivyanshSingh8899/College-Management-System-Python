@@ -1,6 +1,7 @@
 import json
 from faculty import faculty_menu
 from Course import course_menu
+from Student import student_menu
 
 FILE = "data/students.json"
 
@@ -28,23 +29,6 @@ def view_students():
     students = load_data()
     for s in students:
         print(s)
-
-def student_menu():
-    while True:
-        print("\n--- Student Management ---")
-        print("1. Add Student")
-        print("2. View Students")
-        print("3. Back")
-
-        ch = int(input("Enter choice: "))
-        if ch == 1:
-            add_student()
-        elif ch == 2:
-            view_students()
-        elif ch == 3:
-            break
-
-
 
 
 
