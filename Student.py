@@ -51,7 +51,9 @@ def view_students():
     
     print("\n--- Student List ---")
     for i, s in enumerate(students, start=1):
-        print(f"{i}. ID: {s['ID']} | Name: {s['Name']} | Course: {s['Course']} | Email: {s['Email']} | Phone: {s['Phone']}")
+        email = s.get('Email', 'N/A')
+        phone = s.get('Phone', 'N/A')
+        print(f"{i}. ID: {s['ID']} | Name: {s['Name']} | Course: {s['Course']} | Email: {email} | Phone: {phone}")
 
 def search_student():
     students = load_data()
@@ -66,8 +68,8 @@ def search_student():
             print(f"ID: {s['ID']}")
             print(f"Name: {s['Name']}")
             print(f"Course: {s['Course']}")
-            print(f"Email: {s['Email']}")
-            print(f"Phone: {s['Phone']}")
+            print(f"Email: {s.get('Email', 'N/A')}")
+            print(f"Phone: {s.get('Phone', 'N/A')}")
             return
     
     print("Student not found.")
@@ -84,8 +86,8 @@ def update_student():
             print("\nLeave blank to keep old value.")
             new_name = input(f"Enter New Name ({s['Name']}): ").strip()
             new_course = input(f"Enter New Course ({s['Course']}): ").strip()
-            new_email = input(f"Enter New Email ({s['Email']}): ").strip()
-            new_phone = input(f"Enter New Phone ({s['Phone']}): ").strip()
+            new_email = input(f"Enter New Email ({s.get('Email', 'N/A')}): ").strip()
+            new_phone = input(f"Enter New Phone ({s.get('Phone', 'N/A')}): ").strip()
             
             if new_name: s["Name"] = new_name
             if new_course: s["Course"] = new_course
