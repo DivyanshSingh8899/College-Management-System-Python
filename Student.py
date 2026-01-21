@@ -41,3 +41,6 @@ def student_menu():
             view_students()
         elif ch == 3:
             break
+
+if __name__ == "__main__":
+    student_menu()
