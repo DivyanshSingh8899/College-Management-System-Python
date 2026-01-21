@@ -42,9 +42,47 @@ def student_menu():
         elif ch == 3:
             break
 
+FACULTY_FILE = "data/faculty.json"
+
+def load_faculty():
+    try:
+        with open(FACULTY_FILE, "r") as f:
+            return json.load(f)
+    except:
+        return []
+
+def save_faculty(data):
+    with open(FACULTY_FILE, "w") as f:
+        json.dump(data, f, indent=4)
+
+def add_faculty():
+    faculty_list = load_faculty()
+    fid = input("Enter Faculty ID: ")
+    name = input("Enter Faculty Name: ")
+    department = input("Enter Department: ")
+    faculty_list.append({"ID": fid, "Name": name, "Department": department})
+    save_faculty(faculty_list)
+    print("Faculty Added Successfully")
+
+def view_faculty():
+    faculty_list = load_faculty()
+    for f in faculty_list:
+        print(f)
+
 def faculty_menu():
-    print("\n--- Faculty Management ---")
-    print("Coming Soon!")
+    while True:
+        print("\n--- Faculty Management ---")
+        print("1. Add Faculty")
+        print("2. View Faculty")
+        print("3. Back")
+
+        ch = int(input("Enter choice: "))
+        if ch == 1:
+            add_faculty()
+        elif ch == 2:
+            view_faculty()
+        elif ch == 3:
+            break
 
 def course_menu():
     print("\n--- Course Management ---")
