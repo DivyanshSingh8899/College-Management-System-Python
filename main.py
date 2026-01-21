@@ -2,6 +2,7 @@ import json
 from faculty import faculty_menu
 from Course import course_menu
 from Student import student_menu
+from Fees import fees_menu
 
 FILE = "data/students.json"
 
@@ -30,11 +31,6 @@ def view_students():
     for s in students:
         print(s)
 
-
-
-def fees_menu():
-    print("\n--- Fees & Reports ---")
-    print("Coming Soon!")
 
 if __name__ == "__main__":
     while True:
