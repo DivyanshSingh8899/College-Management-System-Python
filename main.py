@@ -3,6 +3,7 @@ from faculty import faculty_menu
 from Course import course_menu
 from Student import student_menu
 from Fees import fees_menu
+from Alumni import alumni_menu
 
 FILE = "data/students.json"
 
@@ -39,7 +40,8 @@ if __name__ == "__main__":
         print("2. Faculty Management")
         print("3. Course Management")
         print("4. Fees & Reports")
-        print("5. Exit")
+        print("5. Alumni Section")
+        print("6. Exit")
 
         choice = int(input("Enter your choice: "))
 
@@ -52,6 +54,8 @@ if __name__ == "__main__":
         elif choice == 4:
             fees_menu()
         elif choice == 5:
+            alumni_menu()
+        elif choice == 6:
             print("Thank You!")
             break
         else:
