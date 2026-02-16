@@ -124,6 +124,7 @@ def faculty_menu():
         print("3. Search Faculty")
         print("4. Update Faculty")
         print("5. Delete Faculty")
+        print("6. Salary report")
         print("6. Back")
 
         try:
