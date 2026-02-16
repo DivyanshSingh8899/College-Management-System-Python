@@ -12,11 +12,6 @@ def load_data():
     except json.JSONDecodeError:
         return []
 
-def save_data(data):
-    os.makedirs(os.path.dirname(FILE), exist_ok=True)
-    with open(FILE, "w") as f:
-        json.dump(data, f, indent=4)
-
 def is_unique_aid(alumni, aid):
     return all(a["ID"] != aid for a in alumni)
 
