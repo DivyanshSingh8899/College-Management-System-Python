@@ -124,7 +124,8 @@ def faculty_menu():
         print("3. Search Faculty")
         print("4. Update Faculty")
         print("5. Delete Faculty")
-        print("6. Back")
+        print("6. Salary report")
+        print("7. Back")
 
         try:
             ch = int(input("Enter choice: "))
